@@ -7,12 +7,12 @@ export default function FreeTrial ({
     learnMoreButtonLabel  
 }: FreeTrials) {
     return (
-        <div className="flex flex-col items-center gap-3 mt-10 p-24 bg-gray-100 lg:w-full">
+        <div className="flex flex-col items-center gap-3 mt-10 p-10 bg-gray-100 lg:w-full">
             <div>
-                <Typography variant="h4" fontWeight="bold">{title}</Typography>
+                <Typography variant="h4" fontWeight="bold" className="whitespace-nowrap pb-5">{title}</Typography>
                 <Typography color="textSecondary">{poster}</Typography>
             </div>
-            <div className="mt-5 gap-3 flex flex-col lg:flex-row lg:w-auto w-80">
+            <div className="mt-5 gap-3 flex flex-col lg:flex-row lg:w-auto w-full">
                 <Button variant="contained" 
                     sx={{ 
                         padding:"10px", 
@@ -35,7 +35,7 @@ export default function FreeTrial ({
                     display:"flex", 
                     gap:"6px",
                     border:"1px solid #757575",
-                    textTransform: "none"
+                    textTransform: "none",
                 }}
                 >
                     {learnMoreButtonLabel}

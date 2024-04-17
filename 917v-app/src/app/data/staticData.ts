@@ -6,7 +6,8 @@ import {
     FAQS, 
     Reviews,
     FreeTrials,
-    Footers
+    Footers,
+    Headers
 } from "@/app/models/StaticDataModel";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
@@ -20,9 +21,21 @@ interface StaticData {
     reviews: Reviews;
     freeTrial: FreeTrials;
     footer: Footers;
+    header: Headers;
 }
 
 const staticData: StaticData = {
+    header: {
+        companyLogo: "/assets/company_logo.png",
+        comapnyName: "Untitled UI",
+        items: {
+            home: "Home",
+            product: "Products",
+            resources: "Resources",
+            pricing: "Pricing"
+        },
+        profile: "/assets/olivia.png"
+    },
     banner:[
         {
             firstContent: "New feature Check out the team dashboard",

@@ -14,7 +14,7 @@ export default function Review ({ title, poster, description, reviewDetails }: R
                     <Typography fontWeight="bold" variant="h5">{poster}</Typography>
                     <Typography color="textSecondary" className="lg:w-8/12">{description}</Typography>
                 </div>
-                <div className="lg:flex">
+                <div className="flex flex-col items-center lg:flex-row">
                     <div className="lg:grid lg:grid-cols-2">
                         {reviewDetails.map((reviewDetail, index) => (
                             <div className="flex flex-col gap-2 mt-10 lg:w-9/12" key={index}>
@@ -25,12 +25,22 @@ export default function Review ({ title, poster, description, reviewDetails }: R
                             
                         ))}
                     </div>
-                    <Box
-                        component="img"
-                        alt="my logo."
-                        src={"/assets/listboard.png"}
-                        // sx={{ width:"60%" }}                             
-                    />
+                    <div className="flex items-center mt-10 lg:hidden">
+                        <Box
+                            component="img"
+                            alt="my logo."
+                            src={"/assets/listboard.png"}                       
+                        />
+                    </div>
+                    <div className="lg:block">
+                        <Box
+                            component="img"
+                            alt="my logo."
+                            src={"/assets/listboard.png"} 
+                            width={400}
+                            height={400}                      
+                        />
+                    </div>
                 </div>
         </div>
     )

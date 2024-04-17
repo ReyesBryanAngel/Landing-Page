@@ -5,11 +5,8 @@ import  staticData from "@/app/data/staticData";
 import { 
   Typography,
   Button,
-  Box,
-  Divider
+  Box
 } from "@mui/material";
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Companies from "@/app/components/Companies";
 import Services from "@/app/components/Services";
 import Manager from "@/app/components/Manager";
@@ -23,7 +20,12 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div>
-        <Header />
+        <Header
+          companyLogo={staticData.header.companyLogo}
+          comapnyName={staticData.header.comapnyName}
+          items={staticData.header.items}
+          profile={staticData.header.profile} 
+        />
         <div className="flex flex-col text-center items-center mt-24">
           {staticData.companies[0] && (
             <Banner
@@ -48,7 +50,7 @@ export default function Home() {
             <Button sx={{ padding:"10px", borderRadius:"8px", border:"1px solid #757575", color:"#000000", display:"flex", gap:"6px" }}>
               <Image
                 src={"/assets/play_button.png"}
-                alt="Github Logo"
+                alt="I am Photo"
                 width={100}
                 height={100}
                 style={{width:"20px", height:"20px" }}

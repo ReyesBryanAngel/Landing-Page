@@ -26,7 +26,7 @@ export default function Manager ({
             <div className="flex flex-col items-center gap-3 mt-5">
                 <Image
                     src={managerImage}
-                    alt="Github Logo"
+                    alt="I am Photo"
                     width={50}
                     height={50}
                     style={{width:"60px", height:"60px" }}

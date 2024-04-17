@@ -8,7 +8,7 @@ export default function Companies ({name, image}: Company) {
         <div className="flex gap-2">
             <Image
                 src={image}
-                alt="Github Logo"
+                alt="I am Photo"
                 width={50}
                 height={50}
                 style={{width:"30px", height:"30px" }}

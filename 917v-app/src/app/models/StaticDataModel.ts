@@ -8,6 +8,7 @@ import {
 } from "@/app/models/FooterModel";
 import { Question } from "@/app/models/QuestionModel";
 import { ReviewDetails } from "@/app/models/ReviewDetailsModel";
+import { HeaderItems } from "@/app/models/HeaderModel";
 export interface BannerItem {
     firstContent: string;
     secondContent: string;
@@ -65,4 +66,11 @@ export interface Footers {
     image: string;
     companyName: string;
     allRights: string;
+}
+
+export interface Headers {
+    companyLogo: string;
+    comapnyName: string;
+    items: HeaderItems;
+    profile: string;
 }

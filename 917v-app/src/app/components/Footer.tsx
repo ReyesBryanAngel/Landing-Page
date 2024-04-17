@@ -34,13 +34,13 @@ export default function Footer ({ footer }: FooterProps) {
                     </div>
                 ))}
             </div>
-            <div>
+            <div className="pb-5 lg:pb-0">
                 <Divider />
                 <div className="p-10 flex flex-col gap-5 lg:flex-row justify-between lg:items-center">
                     <div className="flex gap-3 items-center">
                         <Image
                             src={image}
-                            alt="Github Logo"
+                            alt="I am Photo"
                             width={100}
                             height={100}
                             style={{ borderRadius: "8px", width: "40px", height: "40px" }} />

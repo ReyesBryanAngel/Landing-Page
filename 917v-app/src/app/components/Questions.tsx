@@ -8,8 +8,6 @@ import {
     AccordionDetails,
     Button
   } from "@mui/material";
-  import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-  import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
   import AddCircleIcon from '@mui/icons-material/AddCircle';
   import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 
@@ -24,7 +22,7 @@ export default function Questions ({
 }: FAQS) {
     const [expanded, setExpanded] = useState(Array(queries.length).fill(false));
 
-    const expandAccordion = (index) => {
+    const expandAccordion = (index: number) => {
         const newExpanded = [...expanded];
         newExpanded[index] = !newExpanded[index];
         setExpanded(newExpanded);
@@ -59,7 +57,7 @@ export default function Questions ({
             <div className="flex flex-col gap-3 p-5 items-center mt-10">
                 <Image
                     src={image}
-                    alt="Github Logo"
+                    alt="I am Photo"
                     width={100}
                     height={100}
                 />
