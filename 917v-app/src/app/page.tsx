@@ -47,7 +47,17 @@ export default function Home() {
             }}>
               Sign up
             </Button>
-            <Button sx={{ padding:"10px", borderRadius:"8px", border:"1px solid #757575", color:"#000000", display:"flex", gap:"6px" }}>
+            <Button 
+              sx={{ 
+                padding:"10px", 
+                borderRadius:"8px", 
+                border:"1px solid #757575", 
+                color:"#000000", 
+                display:"flex", 
+                gap:"6px",
+                textTransform: "none",
+              }}
+            >
               <Image
                 src={"/assets/play_button.png"}
                 alt="I am Photo"

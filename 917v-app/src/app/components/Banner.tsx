@@ -21,7 +21,7 @@ export default function Banner({
                             <Typography className="whitespace-nowrap" sx={{ fontSize:"13px", backgroundColor:"white", borderRadius:"16px", color:"#6941C6" }}>{firstContent.split("Check out the team dashboard")}</Typography>
                         </div>
                         <Typography className="whitespace-nowrap" sx={{ fontSize:"13px", color:"#6941C6" }}>{firstContent.split("New feature")}</Typography>
-                        <ArrowForwardIcon sx={{ color:"#6941C6" }} />
+                        <ArrowForwardIcon sx={{ color:"#6941C6" }} className="hover:cursor-pointer" />
 
                     </div>
                 ) : (

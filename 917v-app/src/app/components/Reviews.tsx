@@ -32,7 +32,7 @@ export default function Review ({ title, poster, description, reviewDetails }: R
                             src={"/assets/listboard.png"}                       
                         />
                     </div>
-                    <div className="lg:block">
+                    <div className="hidden lg:block">
                         <Box
                             component="img"
                             alt="my logo."

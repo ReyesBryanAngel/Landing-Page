@@ -203,7 +203,7 @@ const staticData: StaticData = {
     },
     freeTrial: {
         title: "Start your free trial",
-        poster: "Join over 4,000+ startups already growing with United.",
+        poster: "Join over 4,000+ startups already growing with Untitled.",
         getStartedButtonLabel: "Get Started",
         learnMoreButtonLabel: "Learn more"
     },

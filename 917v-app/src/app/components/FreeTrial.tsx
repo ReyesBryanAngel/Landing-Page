@@ -7,7 +7,7 @@ export default function FreeTrial ({
     learnMoreButtonLabel  
 }: FreeTrials) {
     return (
-        <div className="flex flex-col items-center gap-3 mt-10 p-10 bg-gray-100 lg:w-full">
+        <div className="flex flex-col items-center gap-3 mt-10 p-10 lg:p-24 bg-gray-100 lg:w-full">
             <div>
                 <Typography variant="h4" fontWeight="bold" className="whitespace-nowrap pb-5">{title}</Typography>
                 <Typography color="textSecondary">{poster}</Typography>
