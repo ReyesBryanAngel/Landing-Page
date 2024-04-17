@@ -10,10 +10,10 @@ import {
     Breadcrumbs,
     Box,
     Button,
-    Tooltip
+    Tooltip,
 } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-
+import Image from 'next/image';
 
 export default function Header() {
 
@@ -75,36 +75,35 @@ export default function Header() {
     
     return (
         <div className="fixed border w-full top-0 bg-blue-100 transition-all duration-300 left-1/2 transform -translate-x-1/2 z-10 pr-5">
-            <div className='flex justify-between items-center'>            
+            <div className='flex justify-around items-center'>            
                 <div className='flex items-center'>
-                    <div>
+                    <div className='ml-3'>
                         <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                            {/* <Box 
-                                component="img"
-                                src={GithubLogo}
-                                className='h-7'
-                            /> */}
-                            <h4>IMAGE</h4>
+                            <Image
+                                src={"/assets/company_logo.png"}
+                                alt="Company Logo"
+                                width={50}
+                                height={50}
+                                style={{borderRadius:"8px", width:"35px", height:"35px" }}
+                                className='h-6' 
+                            />
                         </a>
                     </div>
                     <div className='ml-1'>
-                        <Typography variant='h6' fontWeight="bold">Untitled UI</Typography>
+                        <Typography variant='h6'>Untitled UI</Typography>
                     </div>
-                    <div className={`flex items-center ml-5 ${showBreadCrumb}`}>
-                        <Button variant='text'>
+                    <div className={`flex ml-5 ${showBreadCrumb}`}>
+                        <Button variant='text' sx={{ textTransform: "none", color: "black" }}>
                             Home
                         </Button>
-                        <Button variant="text">
-                            About
+                        <Button variant="text" sx={{ textTransform: "none" , color: "black" }}>
+                            Products
                         </Button>
-                        <Button variant="text">
-                            Skills
+                        <Button variant="text" sx={{ textTransform: "none" , color: "black" }}>
+                            Resources
                         </Button>
-                        <Button variant="text">
-                            Projects
-                        </Button>
-                        <Button variant="text">
-                            Contact
+                        <Button variant="text" sx={{ textTransform: "none" , color: "black" }}>
+                            Pricing
                         </Button>
                     </div>
                 </div>
@@ -114,25 +113,27 @@ export default function Header() {
                             <ListItemText primary="Home" />
                         </ListItem>
                         <ListItem button onClick={scrolltoAbout}>
-                            <ListItemText primary="About" />
+                            <ListItemText primary="Product" />
                         </ListItem>
                         <ListItem button onClick={scrollToSkils}>
-                            <ListItemText primary="Skills" />
+                            <ListItemText primary="Resources" />
                         </ListItem>
                         <ListItem button onClick={scrollToProjects}>
-                            <ListItemText primary="Projects" />
-                        </ListItem>
-                        <ListItem button onClick={scrollToFooter}>
-                            <ListItemText primary="Contact" />
+                            <ListItemText primary="Pricing" />
                         </ListItem>
                     </List>
                 </Drawer>
                 <div className={showBreadCrumb}>
                     <Tooltip title='Profile' sx={{ position:"relative" }}>
                         <IconButton>
-                            <div className='flex justify-center items-center rounded-full w-9 h-9 p-3 border-2 text-white bg-blue-300'>
-                                <div className='flex text-xs'>
-                                    Profile Pic
+                            <div className='flex justify-center items-center rounded-full w-9'>
+                                <div className='flex'>
+                                    <Box
+                                        component="img"
+                                        className='w-full hover:cursor-pointer'
+                                        alt="my logo."
+                                        src={"/assets/olivia.png"}                                     
+                                    />
                                 </div>
                             </div>
                         </IconButton>

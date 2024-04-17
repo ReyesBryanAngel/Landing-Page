@@ -11,7 +11,7 @@ export default function Companies ({name, image}: Company) {
                 alt="Github Logo"
                 width={50}
                 height={50}
-                style={{borderRadius:"8px", width:"30px", height:"30px" }}
+                style={{width:"30px", height:"30px" }}
                 className='h-6' 
             />
             <Typography>{name}</Typography>
