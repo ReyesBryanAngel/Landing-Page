@@ -8,9 +8,6 @@ export default function Review ({ title, poster, description, reviewDetails }: R
             <Divider />
                 <div className="flex flex-col mt-12 p-5 mt-5 text-start gap-3">
                     <Typography sx={{ color:"#6941C6" }} fontWeight="bold">{title}</Typography>
-                    <div>
-                        
-                    </div>
                     <Typography fontWeight="bold" variant="h5">{poster}</Typography>
                     <Typography color="textSecondary" className="lg:w-8/12">{description}</Typography>
                 </div>

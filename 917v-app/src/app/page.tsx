@@ -73,14 +73,14 @@ export default function Home() {
               <Box
                 component="img"
                 alt="my logo."
-                src={"/assets/laptop.png"}                                     
+                src={"/assets/laptop_half.png"}                                     
               />
             </div>
             <div className="hidden lg:block">
               <Box
                 component="img"
                 alt="my logo."
-                src={"/assets/laptop_half.png"}                                     
+                src={"/assets/laptop.png"}                                     
               />
             </div>
             <div className="mt-10 lg:mt-24">

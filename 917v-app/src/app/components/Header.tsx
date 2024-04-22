@@ -48,7 +48,7 @@ export default function Header({companyLogo, comapnyName, items, profile }: Head
                     <div className='ml-3'>
                         <a target="_blank" rel="noopener noreferrer">
                             <Image
-                                src={companyLogo} //IMAGE
+                                src={companyLogo}
                                 alt="Company Logo"
                                 width={50}
                                 height={50}
@@ -68,9 +68,9 @@ export default function Header({companyLogo, comapnyName, items, profile }: Head
                     </div>
                 </div>
                 <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)}>
-                    <List>
+                    <List sx={{ width:150 }}>
                         {Object.keys(items).map((key) => (
-                            <ListItem button key={key}>
+                            <ListItem button key={key} sx={{ paddingLeft:"30px", marginTop:"10px"}}>
                                 <ListItemText primary={items[key as keyof typeof items]} />
                             </ListItem>
                         ))}
