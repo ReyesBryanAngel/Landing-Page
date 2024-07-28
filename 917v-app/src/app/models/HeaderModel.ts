@@ -1,6 +1,10 @@
 export interface HeaderItems {
     home: string;
     product: string;
-    resources: string;
-    pricing: string;
+    shop: string,
+    preOrder: string,
+    faqs: string,
+    aboutUs: string,
+    contact: string,
+    myAccount: string
 }

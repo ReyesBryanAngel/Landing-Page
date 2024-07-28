@@ -13,6 +13,9 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
 import { Headers } from "@/app/models/StaticDataModel";
+import LocalMallIcon from '@mui/icons-material/LocalMall';
+import SearchIcon from '@mui/icons-material/Search';
+import PersonIcon from '@mui/icons-material/Person';
 
 export default function Header({companyLogo, comapnyName, items, profile }: Headers) {
 
@@ -20,9 +23,6 @@ export default function Header({companyLogo, comapnyName, items, profile }: Head
     const showMenu = 'lg:hidden';
     const [isDrawerOpen, setDrawerOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-
-    useEffect(() => console.log(items));
-
 
     const toggleDrawer = (open: any) => () => {
       setDrawerOpen(open);
@@ -42,7 +42,7 @@ export default function Header({companyLogo, comapnyName, items, profile }: Head
 
     
     return (
-        <div className={`fixed w-full top-0 ${scrolled ? 'bg-customBackground' : ''} transition-all duration-300 left-1/2 transform -translate-x-1/2 z-10 pr-5`}>
+        <div className={`fixed w-full top-0 ${scrolled ? 'bg-customBackground' : ''} transition-all duration-300 left-1/2 transform -translate-x-1/2 z-10 pr-5 py-6`}>
             <div className='flex justify-around items-center'>            
                 <div className='flex items-center'>
                     <div className='ml-3'>
@@ -77,20 +77,23 @@ export default function Header({companyLogo, comapnyName, items, profile }: Head
                     </List>
                 </Drawer>
                 <div className={showBreadCrumb}> {/* PROFILE */}
-                    <Tooltip title='Profile' sx={{ position:"relative" }}>
-                        <IconButton>
+                    {/* <Tooltip title='Cart' sx={{ position:"relative" }}> */}
+                        {/* <IconButton> */}
                             <div className='flex justify-center items-center rounded-full w-9'>
-                                <div className='flex'>
-                                    <Box
+                                <div className='flex gap-4'>
+                                    {/* <Box
                                         component="img"
                                         className='w-full hover:cursor-pointer'
                                         alt="my logo."
                                         src={profile}                                     
-                                    />
+                                    /> */}
+                                    <SearchIcon sx={{ color:`${scrolled ? "white" : ""}` }} />
+                                    <PersonIcon sx={{ color:`${scrolled ? "white" : ""}` }} />
+                                    <LocalMallIcon sx={{ color:`${scrolled ? "white" : ""}` }} />
                                 </div>
                             </div>
-                        </IconButton>
-                    </Tooltip>
+                        {/* </IconButton> */}
+                    {/* </Tooltip> */}
                 </div>
                 <div className={showMenu}>
                     <IconButton edge="start" aria-label="menu" onClick={toggleDrawer(true)}>

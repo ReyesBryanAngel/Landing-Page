@@ -7,13 +7,19 @@ import {
     Reviews,
     FreeTrials,
     Footers,
-    Headers
+    Headers,
+    PopularCategories,
+    BestSellers,
+    MainItems
 } from "@/app/models/StaticDataModel";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 
 interface StaticData {
     banner: BannerItem[];
+    popularCategories: PopularCategories;
+    bestSellers: BestSellers;
+    mainItems: MainItems[];
     companies: Company[];
     services: Service[];
     companyManager: CompanyManager;
@@ -30,17 +36,83 @@ const staticData: StaticData = {
         comapnyName: "Untitled UI",
         items: {
             home: "Home",
-            product: "Products",
-            resources: "Resources",
-            pricing: "Pricing"
+            product: "Explore",
+            shop: "Shop",
+            preOrder: "Pre-Order",
+            faqs: "FAQS",
+            aboutUs: "About Us",
+            contact: "Contact",
+            myAccount: "My Account"
         },
         profile: "/assets/olivia.png"
     },
+    popularCategories: {
+        header: "Your One Stop Shop for Everything Tennis",
+        title: "Popular Categories",
+        categoryItems: [
+           {
+            categoryImage: "/assets/tennis_assets/replacement_grip.jpg",
+            categoryName: "Replacement Grips"
+           },
+           {
+            categoryImage: "/assets/tennis_assets/dampiners.jpg",
+            categoryName: "Tennis Equipments"
+           },
+           {
+            categoryImage: "/assets/tennis_assets/tennis_shirts.jpg",
+            categoryName: "Men's Tennis"
+           },
+           {
+            categoryImage: "/assets/tennis_assets/women_tennis.jpg",
+            categoryName: "Women's Tennis"
+           }
+        ],
+        categoryButton: "VIEW ALL CATEGORIES"
+    },
+    bestSellers: {
+        title: "Best Sellers",
+        products: [
+          {
+            image: "/assets/tennis_assets/women_tennis.jpg",
+            title: "Wilson Leather Replacement Grip",
+            price: "1,550.00"
+          },
+          {
+            image: "/assets/tennis_assets/women_tennis.jpg",
+            title: "Wilson Leather Replacement Grip",
+            price: "1,550.00"
+          },
+          {
+            image: "/assets/tennis_assets/women_tennis.jpg",
+            title: "Wilson Leather Replacement Grip",
+            price: "1,550.00"
+          },
+          {
+            image: "/assets/tennis_assets/women_tennis.jpg",
+            title: "Wilson Leather Replacement Grip",
+            price: "1,550.00"
+          }
+        ]
+    },
+    mainItems: [
+        {
+            title: "Tennis Shoes",
+            product: "/assets/tennis_assets/shoes.png",
+        },
+        {
+            title: "Tennis Rackets",
+            product: "/assets/tennis_assets/raquet.png"
+        },
+        {
+            title: "Tennis balls",
+            product: "/assets/tennis_assets/balls.png"
+        }
+    ],
     banner:[
         {
             firstContent: "New feature Check out the team dashboard",
-            secondContent: "Beautiful analytics to grow smarter",
-            thirdContent: "Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups.",
+            secondContent: "Smash your Limits with the\n Best Tennis Gear",
+            thirdContent: "We provide essential tennis gears and equipment\n to level up your game.",
             applyStyling: true
         },
         {
@@ -85,51 +157,27 @@ const staticData: StaticData = {
     services: [
         {
             image: "/assets/mail.png",
-            header: "Share team inboxes",
-            description: "Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.",
+            header: "100% authentic items",
+            description: "100% Original Tennis Products guaranteed",
             additionalContent: null,
-            icon: ArrowForwardIcon,
-            learnMore: "Learn more",
+            // icon: ArrowForwardIcon,
+            // learnMore: "Learn more",
         },
         {
             image: "/assets/analytics_icon.png",
-            header: "Deliver instant answers",
-            description: "An all-in-one customer service platform that helps you balance everything your costumers need to be happy",
+            header: "Dedicated to tennis",
+            description: "Easily find your favorite tennis brands",
             additionalContent: null,
-            icon: ArrowForwardIcon,
-            learnMore: "Learn more",
-        },
-        {
-            image: "/assets/charge_icon.png",
-            header: "Manage your team with reports",
-            description: "Measure what matters with Untitled's easy-to-use reports. You can filter, export, and drilldown on the data in a couple of clicks.",
-            additionalContent: null,
-            icon: ArrowForwardIcon,
-            learnMore: "Learn more",
+            // icon: ArrowForwardIcon,
+            // learnMore: "Learn more",
         },
         {
             image: "/assets/smile_icon.png",
-            header: "Connect with customers",
-            description: "Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email without confusion.",
+            header: "Improve your game",
+            description: "Updgrade your tennis equipment and skills",
             additionalContent: null,
-            icon: null,
-            learnMore: null,
-        },
-        {
-            image: "/assets/unknown_icon.png",
-            header: "Connect the tools you already use",
-            description: "Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email without confusion.",
-            additionalContent: null,
-            icon: null,
-            learnMore: null,
-        },
-        {
-            image: "/assets/message_icon.png",
-            header: "Our people make the difference",
-            description: "We're an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help.",
-            additionalContent: null,
-            icon: null,
-            learnMore: null,
+            // icon: null,
+            // learnMore: null,
         }
     ],
     companyManager: {

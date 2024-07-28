@@ -24,8 +24,8 @@ export interface Service {
     header: string;
     description: string;
     additionalContent: boolean | null;
-    icon: any;
-    learnMore: string | null;
+    // icon: any;
+    // learnMore: string | null;
 }
 export interface CompanyManager {
     companyImage: string;
@@ -73,4 +73,32 @@ export interface Headers {
     comapnyName: string;
     items: HeaderItems;
     profile: string;
+}
+
+export interface PopularCategories {
+    header: string;
+    title:string;
+    categoryItems: CategoryItems[];
+    categoryButton: string;
+}
+
+export interface CategoryItems {
+    categoryImage: string;
+    categoryName: string;
+}
+
+export interface BestSellers {
+    title: string;
+    products: BestProducts[];
+}
+
+export interface BestProducts {
+    image: string;
+    title: string;
+    price: string;
+}
+
+export interface MainItems {
+    title: string;
+    product: string;
 }
