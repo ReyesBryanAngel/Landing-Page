@@ -10,13 +10,17 @@ import {
     Headers,
     PopularCategories,
     BestSellers,
-    MainItems
+    MainItems,
+    RackerAndString,
+    Cart
 } from "@/app/models/StaticDataModel";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 
 interface StaticData {
+    carts: Cart[];
     banner: BannerItem[];
+    racketAndString: RackerAndString[];
     popularCategories: PopularCategories;
     bestSellers: BestSellers;
     mainItems: MainItems[];
@@ -27,25 +31,103 @@ interface StaticData {
     reviews: Reviews;
     freeTrial: FreeTrials;
     footer: Footers;
-    header: Headers;
+    // header: Headers;
 }
 
 const staticData: StaticData = {
-    header: {
-        companyLogo: "/assets/company_logo.png",
-        comapnyName: "Untitled UI",
-        items: {
-            home: "Home",
-            product: "Explore",
-            shop: "Shop",
-            preOrder: "Pre-Order",
-            faqs: "FAQS",
-            aboutUs: "About Us",
-            contact: "Contact",
-            myAccount: "My Account"
+    // header: {
+    //     companyLogo: "/assets/company_logo.png",
+    //     comapnyName: "Untitled UI",
+    //     items: {
+    //         home: "Home",
+    //         product: "Explore",
+    //         shop: "Shop",
+    //         preOrder: "Pre-Order",
+    //         faqs: "FAQS",
+    //         aboutUs: "About Us",
+    //         contact: "Contact",
+    //         myAccount: "My Account"
+    //     },
+    //     profile: "/assets/olivia.png",
+    //     component: ""
+    // },
+    carts: [
+        {
+            product: {
+                image: "/assets/tennis_assets/sales/wilson_ultrapower.jpeg",
+                title: "Wilson Ultra Power",
+                price: 2500
+            },
+            quantity: 1,
+            total: 2500
         },
-        profile: "/assets/olivia.png"
-    },
+        {
+            product: {
+                image: "/assets/tennis_assets/sales/wilson_ultrapower.jpeg",
+                title: "Wilson Ultra Power",
+                price: 2500
+            },
+            quantity: 1,
+            total: 2500
+        },
+        {
+            product: {
+                image: "/assets/tennis_assets/sales/wilson_ultrapower.jpeg",
+                title: "Wilson Ultra Power",
+                price: 2500
+            },
+            quantity: 1,
+            total: 2500
+        },
+        {
+            product: {
+                image: "/assets/tennis_assets/sales/wilson_ultrapower.jpeg",
+                title: "Wilson Ultra Power",
+                price: 2500
+            },
+            quantity: 1,
+            total: 2500
+        },
+        {
+            product: {
+                image: "/assets/tennis_assets/sales/wilson_ultrapower.jpeg",
+                title: "Wilson Ultra Power",
+                price: 2500
+            },
+            quantity: 1,
+            total: 2500
+        }
+    ],
+    racketAndString: [
+        {
+            id: 1,
+            image: "/assets/tennis_assets/sales/wilson_ultrapower.jpeg",
+            title: "Wilson Ultra Power",
+            price: 2500,
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, rerum. Sequi maiores, officia voluptate earum, accusantium officiis ullam pariatur iste rerum eum, voluptatibus quod? Est alias dignissimos architecto, id rem blanditiis! Quos obcaecati, corporis fugiat sed odio, nihil sint adipisci facere vero animi tempore amet deserunt debitis odit impedit ullam?"
+        },
+        {
+            id: 2,
+            image: "/assets/tennis_assets/sales/babolat_boostaero.jpeg",
+            title: "Head Speed MP 2024",
+            price: 2500,
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, rerum. Sequi maiores, officia voluptate earum, accusantium officiis ullam pariatur iste rerum eum, voluptatibus quod? Est alias dignissimos architecto, id rem blanditiis! Quos obcaecati, corporis fugiat sed odio, nihil sint adipisci facere vero animi tempore amet deserunt debitis odit impedit ullam?"
+        },
+        {
+            id: 3,
+            image: "/assets/tennis_assets/sales/head_speedmp.jpeg",
+            title: "Babolat Boost Aero (Grey Yellow White)",
+            price: 2500,
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, rerum. Sequi maiores, officia voluptate earum, accusantium officiis ullam pariatur iste rerum eum, voluptatibus quod? Est alias dignissimos architecto, id rem blanditiis! Quos obcaecati, corporis fugiat sed odio, nihil sint adipisci facere vero animi tempore amet deserunt debitis odit impedit ullam?"
+        },
+        {
+            id: 4,
+            image: "/assets/tennis_assets/sales/wilson_rolandgarros.jpeg",
+            title: "Wilson Roland Garros Blade 98",
+            price: 2500,
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, rerum. Sequi maiores, officia voluptate earum, accusantium officiis ullam pariatur iste rerum eum, voluptatibus quod? Est alias dignissimos architecto, id rem blanditiis! Quos obcaecati, corporis fugiat sed odio, nihil sint adipisci facere vero animi tempore amet deserunt debitis odit impedit ullam?"
+        }
+    ],
     popularCategories: {
         header: "Your One Stop Shop for Everything Tennis",
         title: "Popular Categories",

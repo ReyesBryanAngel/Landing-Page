@@ -73,6 +73,7 @@ export interface Headers {
     comapnyName: string;
     items: HeaderItems;
     profile: string;
+    component: string;
 }
 
 export interface PopularCategories {
@@ -101,4 +102,24 @@ export interface BestProducts {
 export interface MainItems {
     title: string;
     product: string;
+}
+
+export interface RackerAndString {
+    id: number;
+    image: string;
+    title: string;
+    price: number;
+    description: string;
+}
+
+export interface Cart {
+    product: ProductDetail,
+    quantity: number;
+    total: number;
+}
+
+export interface ProductDetail {
+    image: string;
+    title: string
+    price: number;
 }
