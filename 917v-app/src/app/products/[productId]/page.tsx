@@ -13,16 +13,16 @@ export default function ProductDetails({ params }: {params: { productId: number 
     const quantity = useAppSelector((state) => state.quantity.quantity);
     const basePrice = useAppSelector((state) => state.quantity.basePrice);
     const cartItems = useAppSelector((state) => state.quantity.cartItem);
-
-    if (!product) {
-        return <div>Product not found</div>;
-    }
-
     useEffect(() => {
       if (product) {
         dispatch(setPrice(product.price));
       }
     })
+
+
+    if (!product) {
+        return <div>Product not found</div>;
+    }
 
     const items = {
       home: "Home",
@@ -34,7 +34,7 @@ export default function ProductDetails({ params }: {params: { productId: number 
       contact: "Contact",
       myAccount: "My Account"
     }
-
+    
     const totalPrice = basePrice * quantity;
 
     const handleCheckOut = () => {
@@ -46,11 +46,30 @@ export default function ProductDetails({ params }: {params: { productId: number 
           totalPrice: totalPrice,
           description: product.description
       };
-      dispatch(addItemToCart(cartItem));
-  
+    
       const existingCart = JSON.parse(localStorage.getItem('cart') || '{"cartItem": []}');
-      existingCart.cartItem.push(cartItem);
-      localStorage.setItem('cart', JSON.stringify(existingCart));
+      const itemExists = existingCart.cartItem.some((cart: any) => cart.title === cartItem.title)
+
+      if (itemExists) {
+        const newCartItems = [...existingCart.cartItem];
+        const updatedCartData = newCartItems.map(newCartItem => {
+            if (newCartItem.title === cartItem.title) {
+              return {
+                ...newCartItem, 
+                quantity: newCartItem.quantity += cartItem.quantity, 
+                totalPrice: newCartItem.basePrice * newCartItem.quantity
+              };
+            }
+
+            return newCartItem;
+        })
+        
+        localStorage.setItem("cart", JSON.stringify({ cartItem: updatedCartData}))
+      } else {
+        existingCart.cartItem.push(cartItem);
+        localStorage.setItem('cart', JSON.stringify(existingCart));
+        dispatch(addItemToCart(cartItem));
+      }
   };
 
     return (

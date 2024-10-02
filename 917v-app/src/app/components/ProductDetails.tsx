@@ -35,7 +35,7 @@ export default function ProductDetails() {
       };
 
     return (
-      <Carousel responsive={responsive} className="flex mt-10 lg:ml-24">
+    <Carousel responsive={responsive} className="flex mt-10 lg:ml-24">
         {staticData.racketAndString?.map((item) => (
           <div key={item.id} className="lg:w-96">
             <div className="lg:border lg:p-5 hover:cursor-pointer" onClick={() => handleProductClick(item.id)}> 
